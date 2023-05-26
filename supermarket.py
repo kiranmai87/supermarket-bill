@@ -1,3 +1,4 @@
+from datetime import datetime
 name=input("Enter your name: ")
 address=input("Address: ")
 list1='''    
@@ -24,7 +25,7 @@ for i in range(len(stock)):
         a=input("Enter item: ")
         if a in stock: #checking of given item in stock
             l=[]  #creating empty list to add quantity,price per item,final price of item
-            b=int(input("Enter quantity: ")) #if stock available ask for quantity
+            b=float(input("Enter quantity: ")) #if stock available ask for quantity
             l.append(b)
             price=stock[a]
             l.append(price)
@@ -44,7 +45,7 @@ for i in range (len(quantity2)):
     fprice+=quantity2[i][2] #calculating total bill by adding last elements of list within list  
 print(100*"-")
 print(40*" ","WELCOME TO SUPERMARKET") 
-print("Name: ",name)
+print("Name: ",name,30*" ",datetime.now())
 print("Address: ",address)
 print(100*"-")
 print("sno",10*" ","Item",10*" ","Quantity",10*" ","rate",10*" ","final")
